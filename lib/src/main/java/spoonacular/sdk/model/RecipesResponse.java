@@ -17,6 +17,5 @@ public class RecipesResponse {
     public String toString() {
         return "RecipesResponse [recipes=" + recipes + "]";
     }
-
     
 }

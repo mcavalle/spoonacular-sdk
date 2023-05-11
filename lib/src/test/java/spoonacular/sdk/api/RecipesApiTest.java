@@ -1,23 +1,31 @@
 package spoonacular.sdk.api;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import java.io.IOException;
 import java.util.List;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeAll;
 
 import spoonacular.sdk.model.Recipes;
 
 public class RecipesApiTest {
+
+    private RecipesApi api;
+    
+    @BeforeAll
+    public void setup() {
+        String apiKey = "faaf20a76c594ddabe3652a472c8bad1";
+        api = new RecipesApi(apiKey);
+    }
+
     @Test
-    void listRecipes() throws IOException, InterruptedException{
-        var apiKey = System.getenv("API_KEY");
-        var query = System.getenv("query");
-        var api = new RecipesApi(apiKey);
-        List<Recipes> results = api.listRecipes();
-
-        System.out.println(results);
-
-        Assertions.assertFalse(results.isEmpty());
+    public void testListRecipes() throws IOException, InterruptedException {
+        String query = "pizza";
+        List<Recipes> recipes = api.listRecipes(query);
+        assertNotNull(recipes);
+        assertTrue(!recipes.isEmpty());
+        System.out.println(recipes);
     }
 }
