@@ -2,8 +2,8 @@ package spoonacular.sdk.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class IngredientInfo {
-    @JsonIgnoreProperties
     private int id;
     private String name;
     private String consistency;

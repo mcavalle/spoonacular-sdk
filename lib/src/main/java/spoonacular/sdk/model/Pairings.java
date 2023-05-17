@@ -3,13 +3,13 @@ package spoonacular.sdk.model;
 import java.util.List;
 
 public class Pairings {
-    List<Pairings> pairings;
+    List<String> pairings;
 
-    public List<Pairings> getPairings() {
+    public List<String> getPairings() {
         return pairings;
     }
 
-    public void setPairings(List<Pairings> pairings) {
+    public void setPairings(List<String> pairings) {
         this.pairings = pairings;
     }
 
@@ -17,6 +17,7 @@ public class Pairings {
     public String toString() {
         return "Pairings [pairings=" + pairings + "]";
     }
+
 
     
 }

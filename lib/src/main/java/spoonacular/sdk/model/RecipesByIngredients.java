@@ -4,9 +4,9 @@ import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties (ignoreUnknown = true)
 public class RecipesByIngredients {
     //mapping the response of recipes by ingredients
-    @JsonIgnoreProperties
     private int id;
     private String title;
     private String image;

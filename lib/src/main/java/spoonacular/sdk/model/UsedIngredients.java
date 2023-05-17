@@ -2,9 +2,9 @@ package spoonacular.sdk.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class UsedIngredients {
     //mapping the list of used ingredients
-    @JsonIgnoreProperties
     private int id;
     private double amount;
     private String unit;
