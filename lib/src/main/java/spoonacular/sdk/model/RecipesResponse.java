@@ -3,6 +3,7 @@ package spoonacular.sdk.model;
 import java.util.List;
 
 public class RecipesResponse {
+    //mapping the list of recipes
     List<Recipes> recipes;
 
     public List<Recipes> getRecipes() {

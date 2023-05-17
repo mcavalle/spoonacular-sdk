@@ -26,6 +26,6 @@ public class RecipesApiTest {
         List<Recipes> recipes = api.listRecipes(query);
         assertNotNull(recipes);
         assertTrue(!recipes.isEmpty());
-        System.out.println(recipes);
+        System.out.println(recipes.toString());
     }
 }
